@@ -72,6 +72,7 @@ class Bridge(Node):
     def __init__(self):
         super().__init__('motor_bridge')
         self.latest_wheel_vel_data = []
+        self.buttons = []
 
         timer_period = 1/10  
         self.timer = self.create_timer(timer_period, self.publish_data)
@@ -134,3 +135,4 @@ def main(args=None):
 
 if __name__ == '__main__':
     main()
+
